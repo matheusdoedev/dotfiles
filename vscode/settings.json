@@ -1,0 +1,26 @@
+{
+  "workbench.colorTheme": "Aura Dark (Soft Text)",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 17,
+  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.compactFolders": false,
+  "terminal.integrated.shell.linux": "zsh",
+  "editor.wordWrap": "on",
+  "editor.rulers": [80],
+  "editor.wordWrapColumn": 80,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 4,
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "oneDarkPro.editorTheme": "oneDarkPro",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": null,
+  "window.zoomLevel": -2
+}
