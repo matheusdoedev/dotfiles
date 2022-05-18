@@ -22,5 +22,7 @@
   "oneDarkPro.editorTheme": "oneDarkPro",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": null,
-  "window.zoomLevel": -2
+  "tabnine.experimentalAutoImports": true,
+  "docker.images.label": "RepositoryName",
+  "terminal.integrated.enableMultiLinePasteWarning": false
 }
