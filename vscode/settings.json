@@ -10,7 +10,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "explorer.compactFolders": false,
-  "terminal.integrated.shell.linux": "zsh",
   "editor.wordWrap": "on",
   "editor.rulers": [80],
   "editor.wordWrapColumn": 80,
@@ -19,10 +18,10 @@
   "editor.insertSpaces": false,
   "editor.detectIndentation": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "oneDarkPro.editorTheme": "oneDarkPro",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.codeActionsOnSave": null,
   "tabnine.experimentalAutoImports": true,
   "docker.images.label": "RepositoryName",
-  "terminal.integrated.enableMultiLinePasteWarning": false
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "window.zoomLevel": -1,
+  "bracket-pair-colorizer-2.depreciation-notice": false
 }
