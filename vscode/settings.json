@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Aura Dark (Soft Text)",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontSize": 17,
   "editor.fontFamily": "'Fira Code', monospace",
@@ -19,9 +19,11 @@
   "editor.detectIndentation": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "tabnine.experimentalAutoImports": true,
   "docker.images.label": "RepositoryName",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "window.zoomLevel": -1,
-  "bracket-pair-colorizer-2.depreciation-notice": false
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "window.zoomLevel": -2,
+  "sonarlint.pathToNodeExecutable": "/home/matheusdoedevpc/.asdf/shims/node"
 }
