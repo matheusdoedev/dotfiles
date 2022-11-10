@@ -19,11 +19,11 @@
   "editor.detectIndentation": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "docker.images.label": "RepositoryName",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "window.zoomLevel": -2,
-  "sonarlint.pathToNodeExecutable": "/home/matheusdoedevpc/.asdf/shims/node"
+  "sonarlint.pathToNodeExecutable": "/home/matheusdoedev/.asdf/installs/nodejs/16.17.0/bin/node",
+  "git.mergeEditor": false
 }
