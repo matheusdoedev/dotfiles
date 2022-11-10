@@ -1,0 +1,113 @@
+{
+	"name": "karma-problem-matcher",
+	"displayName": "Karma Problem Matcher",
+	"description": "Capture errors from Karma tests running in Visual Studio Code",
+	"version": "1.0.1",
+	"license": "MIT",
+	"publisher": "rctay",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rctay/vscode-karma-problem-matcher"
+	},
+	"icon": "images/karma-logo.png",
+	"engines": {
+		"vscode": "^1.29.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"problemMatchers": [
+			{
+				"name": "karma-jasmine2",
+				"owner": "typescript",
+				"severity": "error",
+				"pattern": [
+					{
+						"regexp": "\\s+(Expected .*)",
+						"message": 1
+					},
+					{
+						"regexp": "[^\\(]*\\(http://[^:]+:\\d+/(.*)\\?:(\\d+):(\\d+)\\)",
+						"file": 1,
+						"line": 2,
+						"column": 3
+					}
+				],
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "(^\\s+\\d+%\\s+(compiling|building))|(Executed \\d+)"
+					},
+					"endsPattern": {
+						"regexp": "^TOTAL: \\d+"
+					}
+				}
+			},
+			{
+				"name": "karma-jasmine3",
+				"owner": "typescript",
+				"severity": "error",
+				"pattern": [
+					{
+						"regexp": "\\s+(Expected .*)",
+						"message": 1
+					},
+					{
+						"regexp": "^\\s+at <Jasmine>$"
+					},
+					{
+						"regexp": "[^\\(]*\\(http://[^:]+:\\d+/(.*)\\?:(\\d+):(\\d+)\\)",
+						"file": 1,
+						"line": 2,
+						"column": 3
+					}
+				],
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "(^\\s+\\d+%\\s+(compiling|building))|(Executed \\d+)"
+					},
+					"endsPattern": {
+						"regexp": "^TOTAL: \\d+"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"compile": "tsc -p .",
+		"watch": "tsc -watch -p ./",
+		"test": "npm run test:only",
+		"test:only": "TS_NODE_FILES=true npx mocha --require ts-node/register --require test/helpers/patternSeq test/**/*.test.ts",
+		"test:js": "cd build && npx mocha --require test/helpers/patternSeq test/**/*.test.js",
+		"check": "tslint --project ./tsconfig.json",
+		"prepare": "npm run compile",
+		"pretest": "npm run compile",
+		"posttest": "npm run check"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.1.7",
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^8.10.25",
+		"chai": "^4.2.0",
+		"mocha": "^5.2.0",
+		"ts-node": "^7.0.1",
+		"tslint": "^5.11.0",
+		"tslint-microsoft-contrib": "^6.0.0",
+		"tslint-no-unused-expression-chai": "^0.1.4",
+		"typescript": "~3.1.0"
+	},
+	"dependencies": {},
+	"__metadata": {
+		"id": "d752e72d-1ea5-4a09-b297-3ab999719e67",
+		"publisherId": "0e44deac-e293-4b9e-b3a8-a63b11742945",
+		"publisherDisplayName": "rctay",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1660827276359
+	}
+}

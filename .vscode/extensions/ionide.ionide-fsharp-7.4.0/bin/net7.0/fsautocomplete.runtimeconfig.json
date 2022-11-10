@@ -1,0 +1,16 @@
+{
+  "runtimeOptions": {
+    "tfm": "net7.0",
+    "rollForward": "Major",
+    "framework": {
+      "name": "Microsoft.NETCore.App",
+      "version": "7.0.0-rc.2.22472.3"
+    },
+    "rollForward": "major",
+    "configProperties": {
+      "System.GC.Concurrent": true,
+      "System.GC.Server": true,
+      "System.Reflection.Metadata.MetadataUpdater.IsSupported": false
+    }
+  }
+}

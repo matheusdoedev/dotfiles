@@ -1,0 +1,78 @@
+{
+	"name": "arrr",
+	"displayName": "arrr",
+	"description": "The extension provides refactoring tools for your Angular codebase",
+	"version": "0.1.3",
+	"publisher": "obenjiro",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"javascript",
+		"angular",
+		"refactoring",
+		"typescript",
+		"cleancode"
+	],
+	"activationEvents": [
+		"onLanguage:html",
+		"onCommand:extension.arrr.extract-to-folder"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.arrr.extract-to-folder",
+				"title": "Extract Angular component to folder"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"@types/vscode": "^1.47.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"@angular/compiler": "^10.0.7",
+		"@types/mkdirp": "^1.0.1",
+		"change-case": "^4.1.1",
+		"glob": "^7.1.6",
+		"typescript": "^3.8.3",
+		"gitignore-to-glob": "^0.3.0",
+		"mkdirp": "^1.0.4"
+	},
+	"icon": "assets/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/obenjiro/vscode-arrr.git"
+	},
+	"__metadata": {
+		"id": "3211ad40-7300-47fa-bbb5-5d38d7e81b51",
+		"publisherId": "2abce268-050e-424c-86ef-18ceb437d26d",
+		"publisherDisplayName": "obenjiro",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1660827280953
+	}
+}

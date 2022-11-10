@@ -1,0 +1,189 @@
+{
+	"name": "vscode-dotnet-pack",
+	"version": "1.0.9",
+	"preview": true,
+	"publisher": "ms-dotnettools",
+	"author": "Microsoft Corporation",
+	"displayName": ".NET Extension Pack",
+	"description": "The ultimate collection of extensions for working with .NET in VS Code!",
+	"license": "SEE LICENSE IN LICENSE",
+	"icon": "dotnet-logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dotnet/vscode-dotnet-pack.git"
+	},
+	"homepage": "https://github.com/dotnet/vscode-dotnet-pack",
+	"bugs": {
+		"url": "https://github.com/dotnet/vscode-dotnet-pack/issues"
+	},
+	"keywords": [
+		"dotnet",
+		".NET",
+		".NET Core",
+		".NET Interactive",
+		"C#",
+		"csharp",
+		"F#",
+		"fsharp",
+		"Jupyter",
+		"notebooks",
+		"interactive programming"
+	],
+	"categories": [
+		"Extension Packs",
+		"Programming Languages",
+		"Debuggers",
+		"Snippets",
+		"Linters",
+		"Notebooks"
+	],
+	"engines": {
+		"vscode": "^1.53.0"
+	},
+	"extensionPack": [
+		"ms-dotnettools.csharp",
+		"ms-dotnettools.dotnet-interactive-vscode",
+		"ms-toolsai.jupyter",
+		"Ionide.Ionide-fsharp"
+	],
+	"main": "./out/extension",
+	"activationEvents": [
+		"onUri",
+		"onDebugInitialConfigurations",
+		"onDebugResolve:blazorwasm",
+		"onDebugResolve:coreclr",
+		"onDebugResolve:clr",
+		"onLanguage:csharp",
+		"onLanguage:aspnetcorerazor",
+		"onNotebook:dotnet-interactive",
+		"onNotebook:dotnet-interactive-jupyter",
+		"onNotebook:jupyter-notebook",
+		"workspaceContains:project.json",
+		"workspaceContains:*.csproj",
+		"workspaceContains:*.sln",
+		"workspaceContains:*.csx",
+		"workspaceContains:*.cake",
+		"workspaceContains:**/*.csproj",
+		"workspaceContains:**/*.sln",
+		"workspaceContains:**/*.csx",
+		"workspaceContains:**/*.cake",
+		"onCommand:dotnet.gettingStarted",
+		"onWebviewPanel:dotnet.gettingStarted",
+		"onWalkthrough:vscode-dotnet-pack-getting-started"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "dotnet.gettingStarted",
+				"title": ".NET: Getting Started"
+			}
+		],
+		"configuration": {
+			"title": ".NET Extension Pack",
+			"properties": {
+				"dotnet.help.firstView": {
+					"type": [
+						"string"
+					],
+					"enum": [
+						"auto",
+						"gettingStarted",
+						"none"
+					],
+					"enumDescriptions": [
+						"Automatically pick the first experience view",
+						"Present the .NET Getting Started page",
+						"Do not show any view"
+					],
+					"default": "auto",
+					"description": "Sets the default view which is presented during the first use.",
+					"scope": "window"
+				}
+			}
+		},
+		"walkthroughs": [
+			{
+				"id": "vscode-dotnet-pack-getting-started",
+				"title": "Getting Started with .NET",
+				"description": "A walkthrough to help you get the most out of the .NET tooling.",
+				"when": "true",
+				"steps": [
+					{
+						"id": "vscode-dotnet-sdk",
+						"title": "Get the .NET SDK",
+						"description": "The .NET Extension Pack requires the .NET SDK to be installed.\n[Install .NET SDK](https://aka.ms/dotnet-extensionpack-sdk)",
+						"media": {
+							"markdown": "media/install-sdk.md"
+						}
+					},
+					{
+						"id": "vscode-dotnet-pack-getting-started-sample-apps",
+						"title": "Where to Start",
+						"description": "Browse the beginner C# notebooks to learn to code with C#. Click on the button to find our repository of beginner C# content. Simply click on the Notebook Link to open in Visual Studio Code.\n[Beginner C# Notebooks](https://aka.ms/dotnet-extensionpack-csharp-notebooks)",
+						"media": {
+							"markdown": "media/where-to-start.md"
+						}
+					},
+					{
+						"id": "vscode-dotnet-pack-getting-started-where-to-start",
+						"title": "Build an App",
+						"description": "Not sure where to start learning how to code and build apps? Microsoft Learn has courses to teach you how to build web apps, mobile apps, and more! \n[Go to Microsoft Learn](https://aka.ms/dotnet-extensionpack-mslearn)",
+						"media": {
+							"markdown": "media/build-an-app.md"
+						}
+					},
+					{
+						"id": "vscode-dotnet-pack-getting-started-notebooks",
+						"title": "Interactive Notebooks",
+						"description": "With the .NET Extension Pack, you can use interactive notebooks to experiment with code! Create a new notebook by opening the command palette and selecting '.NET Interactive: Create new blank notebook'. \n[Open Command Palette](command:workbench.action.showCommands)",
+						"media": {
+							"markdown": "media/notebooks.md"
+						}
+					},
+					{
+						"id": "vscode-dotnet-pack-getting-started-new-to-vscode",
+						"title": "New to Visual Studio Code",
+						"description": "New to Visual Studio Code? Take a video tour! Watch our introductory videos on the VS Code documentation.\n[Go to Video](https://aka.ms/dotnet-extensionpack-vscode)",
+						"media": {
+							"markdown": "media/new-to-vscode.md"
+						}
+					}
+				]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run build",
+		"compile": "webpack --config webpack.config.js",
+		"watch": "webpack --config webpack.config.js --watch --info-verbosity verbose",
+		"build": "webpack --config webpack.config.js --mode=\"production\"",
+		"lint": "eslint ./src/**/*.ts"
+	},
+	"devDependencies": {
+		"@types/node": "17.0.23",
+		"@types/vscode": "1.53.0",
+		"@typescript-eslint/eslint-plugin": "5.17.0",
+		"@typescript-eslint/parser": "5.17.0",
+		"eslint": "8.12.0",
+		"eslint-plugin-jsdoc": "38.1.4",
+		"ts-loader": "9.2.8",
+		"typescript": "4.6.3",
+		"vscode-tas-client": "0.1.31",
+		"webpack": "5.70.0",
+		"webpack-cli": "4.9.2"
+	},
+	"dependencies": {
+		"vscode-extension-telemetry-wrapper": "0.12.0"
+	},
+	"__metadata": {
+		"id": "7b356f90-19d6-46b4-a441-d88344b768b1",
+		"publisherId": "d05e23de-3974-4ff0-8d47-23ee77830092",
+		"publisherDisplayName": "Microsoft",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1667927758310,
+		"preRelease": false
+	}
+}

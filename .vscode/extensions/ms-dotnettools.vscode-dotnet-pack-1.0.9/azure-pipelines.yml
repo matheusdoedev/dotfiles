@@ -1,0 +1,35 @@
+jobs:
+- job: DotnetExtensionPackCI
+  timeoutInMinutes: 5
+  cancelTimeoutInMinutes: 2
+
+  pool:
+      vmImage: 'windows-2022'
+
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '14.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm ci
+    displayName: 'npm install'
+
+  - task: CmdLine@2
+    displayName: 'Build .NET extension pack'
+    inputs:
+      script: |
+        echo Building .NET extension pack vsix...
+        npx vsce@latest package
+
+  - task: CopyFiles@2
+    inputs:
+      Contents: '*.vsix'
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'

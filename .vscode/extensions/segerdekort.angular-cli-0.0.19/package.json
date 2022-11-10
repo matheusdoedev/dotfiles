@@ -1,0 +1,411 @@
+{
+	"name": "angular-cli",
+	"displayName": "Angular-cli",
+	"description": "This extension eases the use of the Angular cli in Visual Studio Code",
+	"publisher": "segerdekort",
+	"version": "0.0.19",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"categories": [
+		"Extension Packs"
+	],
+	"keywords": [
+		"Angular",
+		"cli",
+		"generate",
+		"TypeScript",
+		"JavaScript"
+	],
+	"icon": "icon.png",
+	"activationEvents": [
+		"onCommand:angular-cli.appShell",
+		"onCommand:angular-cli.application",
+		"onCommand:angular-cli.class",
+		"onCommand:angular-cli.component",
+		"onCommand:angular-cli.directive",
+		"onCommand:angular-cli.enum",
+		"onCommand:angular-cli.guard",
+		"onCommand:angular-cli.interceptor",
+		"onCommand:angular-cli.interface",
+		"onCommand:angular-cli.library",
+		"onCommand:angular-cli.module",
+		"onCommand:angular-cli.pipe",
+		"onCommand:angular-cli.service",
+		"onCommand:angular-cli.serviceWorker",
+		"onCommand:angular-cli.webWorker"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "angular-cli",
+			"properties": {
+				"angular-cli.appShell.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Generates an app shell for running a server-side version of an app."
+				},
+				"angular-cli.appShell.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#appShell-command"
+				},
+				"angular-cli.application.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Generates a new basic app definition in the \"projects\" subfolder of the workspace."
+				},
+				"angular-cli.application.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#application-command"
+				},
+				"angular-cli.class.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Creates a new generic class definition in the given or default project."
+				},
+				"angular-cli.class.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#class-command"
+				},
+				"angular-cli.component.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Creates a new generic component definition in the given or default project."
+				},
+				"angular-cli.component.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#component-command"
+				},
+				"angular-cli.directive.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Creates a new generic directive definition in the given or default project."
+				},
+				"angular-cli.directive.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#directive-command"
+				},
+				"angular-cli.enum.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Generates a new, generic enum definition for the given or default project."
+				},
+				"angular-cli.enum.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#enum-command"
+				},
+				"angular-cli.guard.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Generates a new, generic route guard definition in the given or default project."
+				},
+				"angular-cli.guard.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#guard-command"
+				},
+				"angular-cli.interceptor.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Creates a new, generic interceptor definition in the given or default project."
+				},
+				"angular-cli.interceptor.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#interceptor-command"
+				},
+				"angular-cli.interface.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Creates a new generic interface definition in the given or default project."
+				},
+				"angular-cli.interface.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#interface-command"
+				},
+				"angular-cli.library.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Creates a new generic library project in the current workspace."
+				},
+				"angular-cli.library.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#library-command"
+				},
+				"angular-cli.module.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Creates a new generic NgModule definition in the given or default project."
+				},
+				"angular-cli.module.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#module-command"
+				},
+				"angular-cli.pipe.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Creates a new generic pipe definition in the given or default project."
+				},
+				"angular-cli.pipe.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#pipe-command"
+				},
+				"angular-cli.service.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Creates a new, generic service definition in the given or default project."
+				},
+				"angular-cli.service.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#service-command"
+				},
+				"angular-cli.serviceWorker.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Pass this schematic to the \"run\" command to create a service worker"
+				},
+				"angular-cli.serviceWorker.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#serviceWorker-command"
+				},
+				"angular-cli.webWorker.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Creates a new generic web worker definition in the given or default project."
+				},
+				"angular-cli.webWorker.options": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Add additional options to the command. For all options see https://angular.io/cli/generate#webWorker-command"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "angular-cli.appShell",
+				"title": "New appShell"
+			},
+			{
+				"command": "angular-cli.application",
+				"title": "New application"
+			},
+			{
+				"command": "angular-cli.class",
+				"title": "New class"
+			},
+			{
+				"command": "angular-cli.component",
+				"title": "New component"
+			},
+			{
+				"command": "angular-cli.directive",
+				"title": "New directive"
+			},
+			{
+				"command": "angular-cli.enum",
+				"title": "New enum"
+			},
+			{
+				"command": "angular-cli.guard",
+				"title": "New guard"
+			},
+			{
+				"command": "angular-cli.interceptor",
+				"title": "New interceptor"
+			},
+			{
+				"command": "angular-cli.interface",
+				"title": "New interface"
+			},
+			{
+				"command": "angular-cli.library",
+				"title": "New library"
+			},
+			{
+				"command": "angular-cli.module",
+				"title": "New module"
+			},
+			{
+				"command": "angular-cli.pipe",
+				"title": "New pipe"
+			},
+			{
+				"command": "angular-cli.service",
+				"title": "New service"
+			},
+			{
+				"command": "angular-cli.serviceWorker",
+				"title": "New serviceWorker"
+			},
+			{
+				"command": "angular-cli.webWorker",
+				"title": "New webWorker"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "angular-cli.appShell",
+					"alt": "Generates an app shell for running a server-side version of an app.",
+					"group": "navigation",
+					"when": "config.angular-cli.appShell.enabled"
+				},
+				{
+					"command": "angular-cli.application",
+					"alt": "Generates a new basic app definition in the \"projects\" subfolder of the workspace.",
+					"group": "navigation",
+					"when": "config.angular-cli.application.enabled"
+				},
+				{
+					"command": "angular-cli.class",
+					"alt": "Creates a new generic class definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.class.enabled"
+				},
+				{
+					"command": "angular-cli.component",
+					"alt": "Creates a new generic component definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.component.enabled"
+				},
+				{
+					"command": "angular-cli.directive",
+					"alt": "Creates a new generic directive definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.directive.enabled"
+				},
+				{
+					"command": "angular-cli.enum",
+					"alt": "Generates a new, generic enum definition for the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.enum.enabled"
+				},
+				{
+					"command": "angular-cli.guard",
+					"alt": "Generates a new, generic route guard definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.guard.enabled"
+				},
+				{
+					"command": "angular-cli.interceptor",
+					"alt": "Creates a new, generic interceptor definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.interceptor.enabled"
+				},
+				{
+					"command": "angular-cli.interface",
+					"alt": "Creates a new generic interface definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.interface.enabled"
+				},
+				{
+					"command": "angular-cli.library",
+					"alt": "Creates a new generic library project in the current workspace.",
+					"group": "navigation",
+					"when": "config.angular-cli.library.enabled"
+				},
+				{
+					"command": "angular-cli.module",
+					"alt": "Creates a new generic NgModule definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.module.enabled"
+				},
+				{
+					"command": "angular-cli.pipe",
+					"alt": "Creates a new generic pipe definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.pipe.enabled"
+				},
+				{
+					"command": "angular-cli.service",
+					"alt": "Creates a new, generic service definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.service.enabled"
+				},
+				{
+					"command": "angular-cli.serviceWorker",
+					"alt": "Pass this schematic to the \"run\" command to create a service worker",
+					"group": "navigation",
+					"when": "config.angular-cli.serviceWorker.enabled"
+				},
+				{
+					"command": "angular-cli.webWorker",
+					"alt": "Creates a new generic web worker definition in the given or default project.",
+					"group": "navigation",
+					"when": "config.angular-cli.webWorker.enabled"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js",
+		"package": "vsce package",
+		"publish": "vsce publish",
+		"commit": "git-cz",
+		"release": "standard-version"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"@types/vscode": "^1.40.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"cz-conventional-changelog": "^3.2.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"standard-version": "^8.0.0",
+		"ts-loader": "^7.0.5",
+		"typescript": "^3.8.3",
+		"vsce": "^1.75.0",
+		"vscode-test": "^1.3.0",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11"
+	},
+	"dependencies": {},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"standard-version": {
+		"skip": {
+			"tag": true
+		}
+	},
+	"__metadata": {
+		"id": "64035f64-470c-4eb0-a5bd-363a84b31775",
+		"publisherId": "7d0c8a13-92c7-4758-8faf-0427f783498d",
+		"publisherDisplayName": "Seger de Kort",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1660827276344
+	}
+}

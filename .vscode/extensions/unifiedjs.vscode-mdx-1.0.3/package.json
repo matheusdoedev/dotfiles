@@ -1,0 +1,159 @@
+{
+	"name": "vscode-mdx",
+	"version": "1.0.3",
+	"displayName": "MDX",
+	"description": "Language support for MDX",
+	"categories": [
+		"Programming Languages"
+	],
+	"repository": "https://github.com/mdx-js/vscode-mdx.git",
+	"author": "JounQin",
+	"publisher": "unifiedjs",
+	"donate": {
+		"recipients": [
+			{
+				"name": "unts",
+				"platform": "opencollective",
+				"address": "https://opencollective.com/unts",
+				"weight": 60
+			},
+			{
+				"name": "rxts",
+				"platform": "opencollective",
+				"address": "https://opencollective.com/rxts",
+				"weight": 20
+			},
+			{
+				"name": "1stG",
+				"email": "i@1stg.me",
+				"weight": 20,
+				"platforms": [
+					{
+						"platform": "opencollective",
+						"address": "https://opencollective.com/1stG"
+					},
+					{
+						"platform": "patreon",
+						"address": "https://www.patreon.com/1stG"
+					}
+				]
+			}
+		]
+	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/unified"
+	},
+	"sponsor": {
+		"url": "https://github.com/mdx-js/vscode-mdx?sponsor=1"
+	},
+	"license": "MIT",
+	"private": true,
+	"packageManager": "yarn@1.22.19",
+	"engines": {
+		"vscode": ">=1.0.0"
+	},
+	"keywords": [
+		"mdx",
+		"Markdown",
+		"Markdown React"
+	],
+	"scripts": {
+		"lint": "eslint . --cache -f friendly",
+		"prepare": "patch-package && simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0"
+	},
+	"devDependencies": {
+		"@1stg/common-config": "^7.0.0",
+		"@changesets/changelog-github": "^0.4.6",
+		"@changesets/cli": "^2.24.3",
+		"patch-package": "^6.4.7",
+		"typescript": "^4.7.4",
+		"yarn-deduplicate": "^5.0.2"
+	},
+	"resolutions": {
+		"prettier": "^2.7.1"
+	},
+	"icon": "assets/mdx.png",
+	"contributes": {
+		"languages": [
+			{
+				"id": "mdx",
+				"aliases": [
+					"Markdown React",
+					"MDX"
+				],
+				"extensions": [
+					".mdx"
+				],
+				"configuration": "./language-configuration.jsonc"
+			}
+		],
+		"grammars": [
+			{
+				"language": "mdx",
+				"scopeName": "text.html.markdown.jsx",
+				"path": "./syntaxes/mdx.tmLanguage.json",
+				"embeddedLanguages": {
+					"source.js": "javascript",
+					"source.js.jsx": "javascriptreact",
+					"meta.tag.js": "jsx-tags",
+					"meta.tag.without-attributes.js": "jsx-tags",
+					"meta.embedded.block.frontmatter": "yaml",
+					"meta.embedded.block.css": "css",
+					"meta.embedded.block.ini": "ini",
+					"meta.embedded.block.java": "java",
+					"meta.embedded.block.lua": "lua",
+					"meta.embedded.block.makefile": "makefile",
+					"meta.embedded.block.perl": "perl",
+					"meta.embedded.block.r": "r",
+					"meta.embedded.block.ruby": "ruby",
+					"meta.embedded.block.php": "php",
+					"meta.embedded.block.sql": "sql",
+					"meta.embedded.block.vs_net": "vs_net",
+					"meta.embedded.block.html": "html",
+					"meta.embedded.block.xml": "xml",
+					"meta.embedded.block.xsl": "xsl",
+					"meta.embedded.block.yaml": "yaml",
+					"meta.embedded.block.dosbatch": "dosbatch",
+					"meta.embedded.block.clojure": "clojure",
+					"meta.embedded.block.coffee": "coffee",
+					"meta.embedded.block.c": "c",
+					"meta.embedded.block.cpp": "cpp",
+					"meta.embedded.block.diff": "diff",
+					"meta.embedded.block.dockerfile": "dockerfile",
+					"meta.embedded.block.go": "go",
+					"meta.embedded.block.groovy": "groovy",
+					"meta.embedded.block.pug": "jade",
+					"meta.embedded.block.javascript": "javascript",
+					"meta.embedded.block.javascriptreact": "javascriptreact",
+					"meta.embedded.block.json": "json",
+					"meta.embedded.block.less": "less",
+					"meta.embedded.block.objc": "objc",
+					"meta.embedded.block.scss": "scss",
+					"meta.embedded.block.perl6": "perl6",
+					"meta.embedded.block.powershell": "powershell",
+					"meta.embedded.block.python": "python",
+					"meta.embedded.block.rust": "rust",
+					"meta.embedded.block.scala": "scala",
+					"meta.embedded.block.shellscript": "shellscript",
+					"meta.embedded.block.typescript": "typescript",
+					"meta.embedded.block.typescriptreact": "typescriptreact",
+					"meta.embedded.block.csharp": "csharp",
+					"meta.embedded.block.fsharp": "fsharp"
+				}
+			}
+		]
+	},
+	"qna": "https://github.com/orgs/mdx-js/discussions",
+	"__metadata": {
+		"id": "af8cfc85-cb72-45d0-bae2-9a98cd0c69f3",
+		"publisherId": "207bcd0f-c1b5-4dc9-ab76-47615c59238d",
+		"publisherDisplayName": "unified",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1664456964215
+	}
+}
