@@ -1,1 +1,0 @@
-npx vsce@latest package

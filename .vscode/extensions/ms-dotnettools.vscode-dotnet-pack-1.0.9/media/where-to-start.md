@@ -1,1 +1,0 @@
-![A gif showing how to find csharp notebooks](csharp-notebooks.gif)
