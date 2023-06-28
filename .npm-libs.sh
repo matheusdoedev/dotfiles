@@ -1,1 +1,1 @@
-npm i -g @angular/cli @nestjs/cli @vue/cli eslint expo-cli ts-node-dev ts-node typescript typescript-language-server yarn
+npm i -g @angular/cli @vue/cli eslint prettier tslint expo-cli ts-node-dev ts-node nodemon typescript typescript-language-server yarn
