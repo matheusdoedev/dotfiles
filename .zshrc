@@ -1,10 +1,11 @@
 # Envs
 export ZSH="$HOME/.oh-my-zsh"
 
-# Oh My ZSH config
+# ZSH config
 ZSH_THEME="amuse"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ASDF config
 . $HOME/.asdf/asdf.sh
