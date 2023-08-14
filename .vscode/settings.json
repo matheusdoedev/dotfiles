@@ -1,14 +1,11 @@
 {
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontSize": 17,
-  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontSize": 20,
+  "editor.fontFamily": "'Hasklug Nerd Font Mono', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "explorer.compactFolders": false,
   "editor.wordWrap": "on",
   "editor.rulers": [80],
@@ -23,7 +20,17 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
-  "window.zoomLevel": -2,
+  "window.zoomLevel": -1,
   "sonarlint.pathToNodeExecutable": "/home/matheusdoedev/.asdf/installs/nodejs/16.17.0/bin/node",
-  "git.mergeEditor": false
+  "git.mergeEditor": false,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "rsp-ui.enableStartServerOnActivation": [
+    {
+      "id": "redhat.vscode-community-server-connector",
+      "name": "Community Server Connector",
+      "startOnActivation": true
+    }
+  ]
 }
