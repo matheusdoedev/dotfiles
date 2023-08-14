@@ -1,5 +1,6 @@
 # Envs
 export ZSH="$HOME/.oh-my-zsh"
+export JAVA_HOME="$HOME/.asdf/installs/java/oracle-20"
 
 # ZSH config
 ZSH_THEME="amuse"
