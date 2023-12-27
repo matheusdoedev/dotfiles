@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontSize": 20,
   "editor.fontFamily": "'Hasklug Nerd Font Mono', monospace",
@@ -17,20 +17,38 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "terminal.integrated.enableMultiLinePasteWarning": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
-  "window.zoomLevel": -1,
-  "sonarlint.pathToNodeExecutable": "/home/matheusdoedev/.asdf/installs/nodejs/16.17.0/bin/node",
+  "sonarlint.pathToNodeExecutable": "/home/matheusdoedev/.asdf/installs/nodejs/20.5.1/bin/node",
   "git.mergeEditor": false,
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
-  "rsp-ui.enableStartServerOnActivation": [
-    {
-      "id": "redhat.vscode-community-server-connector",
-      "name": "Community Server Connector",
-      "startOnActivation": true
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [120],
+    "editor.semanticHighlighting.enabled": true,
+    "editor.formatOnType": true
+  },
+  "window.zoomLevel": -1,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "sonarlint.rules": {
+    "java:S106": {
+      "level": "off"
     }
-  ]
+  }
 }
