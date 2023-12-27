@@ -1,6 +1,7 @@
 # Envs
 export ZSH="$HOME/.oh-my-zsh"
-export JAVA_HOME="$HOME/.asdf/installs/java/oracle-20"
+export JAVA_HOME="$HOME/.asdf/installs/java/openjdk-17.0.2"
+export M2_HOME="$HOME/.asdf/installs/maven/3.9.5"
 
 # ZSH config
 ZSH_THEME="amuse"
@@ -27,7 +28,9 @@ alias vi=nvim
 alias v=nvim
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+if [ ng ]; then
+	source <(ng completion script)
+fi
 
 # Fixing TILIX bug
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
