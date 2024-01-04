@@ -24,7 +24,7 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
-  "sonarlint.pathToNodeExecutable": "/home/matheusdoedev/.asdf/installs/nodejs/20.5.1/bin/node",
+  "sonarlint.pathToNodeExecutable": "/home/matheusdoedev/.asdf/installs/nodejs/21.5.0/bin/node",
   "git.mergeEditor": false,
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
