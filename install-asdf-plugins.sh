@@ -10,6 +10,10 @@ echo "Nodejs plugin installed!"
 asdf plugin-add java https://github.com/halcyon/asdf-java.git
 echo "Java plugin installed!"
 
+# Install Maven plugin
+asdf plugin-add maven
+echo "Maven plugin installed!"
+
 # Install Python plugin
 asdf plugin-add python
 echo "Python plugin installed!"
