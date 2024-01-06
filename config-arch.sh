@@ -12,6 +12,8 @@ sudo ln -s /var/lib/snapd/snap /snap
 
 sudo snap install code --classic
 
+sudo snap install superproductivity
+
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 
 # Install asdf plugins
