@@ -2,7 +2,7 @@
 
 sudo pacman Syyu
 
-sudo pacman -S curl wget podman podman-compose gcc make firefox snapd zsh zsh-autosuggestions git tilix snapd
+sudo pacman -S curl wget podman podman-compose gcc make firefox snapd zsh zsh-autosuggestions git tilix snapd flatpak
 
 sudo systemctl enable snapd
 
