@@ -2,9 +2,15 @@
 
 sudo pacman Syyu
 
-sudo pacman -S curl wget podman podman-compose gcc make firefox snapd zsh zsh-autosuggestions git tilix
+sudo pacman -S curl wget podman podman-compose gcc make firefox snapd zsh zsh-autosuggestions git tilix snapd
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo systemctl enable snapd
+
+sudo systemctl start snapd
+
+sudo ln -s /var/lib/snapd/snap /snap
+
+sudo snap install code --classic
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 
@@ -45,3 +51,4 @@ echo "Elixir plugin installed"
 asdf plugin-add php https://github.com/asdf-community/asdf-php.git
 echo "PHP plugin installed"
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
