@@ -1,13 +1,16 @@
 # Envs
 export ZSH="$HOME/.oh-my-zsh"
 export JAVA_HOME="$HOME/.asdf/installs/java/openjdk-17.0.2"
-export M2_HOME="$HOME/.asdf/installs/maven/3.9.5"
+export M2_HOME="$HOME/.asdf/installs/maven/3.9.6"
+export PATH="$JAVA_HOME/bin:$M2_HOME/bin:$PATH"
 
 # ZSH config
 ZSH_THEME="amuse"
-plugins=(git)
+plugins=(
+	git
+	zsh-autosuggestions
+)
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ASDF config
 . $HOME/.asdf/asdf.sh
