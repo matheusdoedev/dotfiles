@@ -1,22 +1,22 @@
 {
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "Aura Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontSize": 20,
+  "editor.fontSize": 18,
   "editor.fontFamily": "'Hasklug Nerd Font Mono', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "explorer.compactFolders": false,
   "editor.wordWrap": "on",
-  "editor.rulers": [80],
-  "editor.wordWrapColumn": 80,
+  "editor.rulers": [120],
+  "editor.wordWrapColumn": 120,
   "editor.renderWhitespace": "all",
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.insertSpaces": false,
   "editor.detectIndentation": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
@@ -26,11 +26,7 @@
   "git.enableSmartCommit": true,
   "sonarlint.pathToNodeExecutable": "/home/matheusdoedev/.asdf/installs/nodejs/21.5.0/bin/node",
   "git.mergeEditor": false,
-  "[java]": {
-    "editor.defaultFormatter": "redhat.java"
-  },
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -42,10 +38,6 @@
     "editor.formatOnType": true
   },
   "window.zoomLevel": -1,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
-  },
-  "tabnine.experimentalAutoImports": true,
   "sonarlint.rules": {
     "java:S106": {
       "level": "off"
